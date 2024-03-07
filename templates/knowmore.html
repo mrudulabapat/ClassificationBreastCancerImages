@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Breast Cancer Analyzer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+	<!--Link to Font Awesome icons-->
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<!--Link to fonts from google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+
+
+	<link rel="shortcut icon" type="image/png" href="robotfavicon.png">
+
+<style>
+	html,body,h2,h3,h4 {font-family: Helvetica, sans-serif;}
+</style>
+
+</head>
+<body class="w3-pale-blue">
+
+<div class="w3-content card" style="max-width:960px">
+
+	<div class="panel w3-pink logo">
+		<h2 style="text-align : center"><img src="static/science.png" class="animated bounceInDown" style=" width:75px; height: 75px;margin:20px;opacity:0.8;">Breast Histopathology Image Analyser</h2>
+	</div>
+
+	<div class="w3-center add-margin side-margin w3-round w3-pale-red w3-animate-opacity">
+		<h5 class='breast-cancer new-font w3-text-purple w3-xlarge'>Know More</h5>
+	</div>
+
+	<div class="w3-badge w3-padding w3-round-xlarge"  style="background-color: ghostWhite">
+		<strong><p class="w3-text-blue w3-padding w3-margin w3-large" style="text-align: justify;">Breast cancer is the most common form of cancer in women, and invasive ductal carcinoma (IDC) is the most common form of breast cancer. Accurately identifying and categorizing breast cancer subtypes is an important clinical task, and automated methods can be used to save time and reduce error.  The goal of this analyzer is to identify IDC when it is present in otherwise unlabeled histopathology images.</p></strong>
+	</div>
+	<br>
+
+	<div class="w3-padding-large w3-margin-bottom">
+		<h3 class="w3-text-pink w3-padding w3-margin page-title " style="font-weight: bold;">Invasive Ductal Carcinoma (IDC)</h3>
+
+		<img src="./static/idcimage.jpg" alt="IDC image" class="w3-margin-right w3-left imgframe" width="180">
+		<p class="w3-text-black w3-padding w3-margin w3-justify">Invasive ductal carcinoma (IDC), sometimes called infiltrating ductal carcinoma, is the most common type of breast cancer. About 80% of all breast cancers are invasive ductal carcinomas.
+		Invasive means that the cancer has “invaded” or spread to the surrounding breast tissues. </p>
+	</div>
+	<br>
+	<br>
+
+	<div class="w3-padding-large w3-margin-top" style="margin-bottom: 150px;">
+		<h3 class="w3-text-pink w3-padding w3-margin page-title " style="font-weight: bold;">Non-Invasive Ductal Carcinoma (Non-IDC)</h3>
+		
+		<p class="w3-text-black w3-padding w3-margin w3-justify" align="left">
+		<img src="static/8863_idx5_x551_y1851_class0.png" alt="Non-IDC image" class="w3-margin-left imgframe" align = "right"  width="180">
+		Noninvasive (in situ) breast cancer cells remain in a particular location of the breast, without spreading to surrounding tissue, lobules or ducts.
+		Other types of breast cancer include sarcoma of the breast, metaplastic carcinoma, adenocystic carcinoma, phyllodes tumor and angiosarcoma.
+		</p>
+	</div>
+	<br>
+	<form action="/">
+	<center>
+	<input class="w3-btn w3-green w3-round marginb w3-codespan adjust-spacing w3-hover-yellow btn-font w3-padding-large w3-large w3-space-letters w3-card-4 w3-leftbar w3-rightbar" value="BACK" type="submit">
+	</center>
+	</form>
+</div>
+
+</body>
+</html>

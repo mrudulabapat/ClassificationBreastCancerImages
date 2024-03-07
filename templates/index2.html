@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Breast Cancer Analyzer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+<!--	<link rel="stylesheet" href="{{ url_for('static',filename='w3.css') }}">-->
+	<!--Link to Font Awesome icons-->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<!--Link to fonts from google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+<style>
+	html,body,h2,h3,h4 {font-family: Helvetica, sans-serif;}
+</style>
+
+</head>
+
+
+<body class="w3-pale-blue">
+<div class="w3-content card" style="max-width:960px">
+
+
+<div class="panel w3-pink logo">
+	<h2 style="text-align : center"><img src="static/science.png" class="animated bounceInDown" style=" width:75px; height: 75px;margin:20px;opacity:0.8;">Breast Histopathology Image Analyser</h2>
+</div>
+
+<div class="w3-center add-margin side-margin w3-round w3-pale-red w3-animate-opacity">
+	<h5 class='breast-cancer new-font w3-text-purple'>For IDC Cancer Images</h5>
+</div>
+
+<div class="w3-center">
+	<img id="selected-image" class="w3-round adjust-image" width="200" src="static/8863_idx5_x601_y1851_class0.png" alt="">
+</div>
+
+<div class="w3-center add-padding w3-border add-margin side-margin w3-round w3-white w3-pale-teal">
+
+	<h4 class='resultTab btn-font'>RESULTS</h4>
+<table>
+	<tr>
+		<th>Filename</th>
+		<th>IDC</th>
+    	<th>Non-IDC</th>
+	</tr>
+	{%for i,j in filename|zip(predictions):%}
+
+	<tr>
+			<td>{{i.split('/')[-1][8:]}}</td>
+			<td>{{j[0]}}</td>
+			<td>{{j[1]}}</td>
+	</tr>
+
+	{%endfor%}
+</table>
+
+
+
+</div>
+<center>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <p>{{ message }}</p>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+</center>
+<!-- Button -->
+<div id="btnn" class="w3-center bottom-padding">
+
+	<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+    <p style="float:left; padding-left:270px; padding-top: 50px; margin-top: 20px;">
+		<input type="submit" value="Submit Image" class="w3-btn w3-purple w3-round w3-margin-bottom adjust-spacing w3-hover-red btn-font w3-padding w3-space-letters w3-card-4">
+	</p>
+	</form>
+
+	<form method="post" action="/predict_api">
+		<p style="float:right; padding-right: 270px; padding-top: 50px; margin-top: 20px;">
+		<input type="submit" value="Make Prediction" class="w3-btn w3-purple w3-round w3-margin-bottom adjust-spacing w3-hover-red btn-font w3-padding w3-space-letters w3-card-4">
+		</p>
+	</form>
+
+<p class="w3-text-teal">jpeg or png</p>
+
+</div>
+	<form method="post" action="/knowmore">
+	<center>
+
+		<input class="w3-btn w3-green w3-round marginb w3-codespan adjust-spacing w3-hover-yellow btn-font w3-padding-large w3-large w3-space-letters w3-card-4 w3-leftbar w3-rightbar"
+			   value="Know More!" type="submit">
+
+
+	</center></form>
+</div>
+
+
+</body>
+</html>
