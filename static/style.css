@@ -1,0 +1,180 @@
+.panel{
+	text-align : center;
+	text-shadow: -1px -1px 1px #FFFFFF, 1px 1px 1px #000000;
+	font-weight: bold;
+	text-transform: capitalize;
+	height: 55%;
+	line-height: 4;
+	opacity: 1;
+}
+
+.w3-animate-opacity{
+	-webkit-animation:opac 1.5s;
+	animation:opac 1.5s
+}
+
+.w3-pale-blue,.w3-hover-pale-blue:hover{
+	color:#000!important;
+	background-color:#e7ffff!important
+}
+
+.w3-white,.w3-hover-white:hover{
+	color:#000!important;
+	background-color:#fff!important
+}
+
+.w3-content{
+	max-width:980px;margin:auto
+}
+
+.w3-card{
+	border:1px solid #ccc
+}
+
+.w3-card-4,.w3-hover-shadow:hover{
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important
+}
+
+.w3-round,.w3-round-medium{
+	border-radius:4px!important}
+
+
+.w3-border{
+	border:1px solid #ccc!important
+}
+
+.w3-center{
+	text-align:center!important
+}
+
+.w3-hover-red:hover{
+	color:#fff!important;
+	background-color:#f44336!important
+}
+
+.w3-text-teal,.w3-hover-text-teal:hover{
+	color:#009688!important
+}
+
+.card {
+	box-shadow: 0 4px 8px 4px rgba(0,0,0,0.2);
+	margin-top: 16px;
+	margin-bottom: 16px;
+	background: white;
+}
+
+.add-margin {
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.side-margin {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+
+.add-padding {
+	
+	padding-bottom: 30px;
+}
+
+.resultTab {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.4em;
+	min-height: 50%;
+	background-color: lightblue;
+
+
+}
+
+.bottom-padding {
+	padding-bottom: 200px;
+}
+
+.hide {
+	display: none;
+}
+
+.logo h1 {
+	font-size: 50px;
+	font-family: 'Oswald', sans-serif;
+	line-height: 1.1;
+}
+
+.logo1 {
+	font-family: 'Oswald', sans-serif;
+}
+
+.adjust-image {
+	max-width: 400px;
+	margin: 30px 40px;
+}
+
+adjust-spacing{
+    margin-top: 20px;
+}
+
+/*input[type="file"] {
+    opacity: 0;
+    
+}*/
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: "Select files";
+  /*display: inline-block;*/
+/*  background: linear-gradient(top, #f9f9f9, #e3e3e3);*/
+  background-color: lightblue;
+  color: black;
+/*  border: 1px solid #999;*/
+  border-radius: 3px;
+  padding: 12px 15px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+/*  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;*/
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page-title:after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    /*margin: 0 auto;*/ /* This will center the border. */
+    width: 60%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 10px solid; /* This creates the border. Replace black with whatever color you want. */
+    border-image-slice: 1;
+ 	border-width: 5px;
+  	border-radius: 10px;
+  	border-image-source: linear-gradient(to left, #2196f3,coral);
+  }
+
+
+
+.imgframe {
+    background-color: dodgerblue;
+    padding: 4px;
+    opacity: 1;
+    }
+
+.marginb{
+    margin-bottom: 90px;
+}
